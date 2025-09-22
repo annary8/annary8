@@ -1,0 +1,252 @@
+/* Сброс стилей для всех элементов */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Базовые настройки для страницы */
+body {
+	font-family: Lucida Sans Unicode, sans-serif;
+	line-height: 1.6;
+}
+
+/* Верхнее меню */
+header {
+	background-color: #9ACD32;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	padding: 10px 20px;
+	position: sticky;
+	top: 0;
+}
+
+/* Логотип (может быть заменён изображением) */
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+margin-right: 30px; /* Отступ от левой границы и между логотипом и меню */
+}
+
+      /* Стили для навигационного меню */
+nav ul {
+	list-style: none;
+	display: flex;
+}
+
+nav ul li {
+	/*margin-right: 10px;  Расстояние между пунктами меню */
+	padding: 5px 0;
+	text-align: center;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	transition: background-color 0.3s ease; /* Smooth hover effect */
+	padding: 3px 4px; /* Adds spacing around text */
+}
+nav ul li a:hover {
+	background-color: #fff; /* Slightly lighter background on hover */
+	border-radius: 5px; /* Rounded corners for hover effect */
+	color: #9ACD32;
+}
+nav ul li a.active {
+	background-color: #fff; /* Slightly lighter background on hover */
+	border-radius: 5px; /* Rounded corners for hover effect */
+	color: #9ACD32;
+}
+
+/* Основной контент страницы */
+main {
+	padding: 20px;
+}
+main a {
+	color: #9ACD32; /* Цвет ссылок */
+}
+main a:visited {
+	color: #9ACD32; /* Цвет посещенных ссылок */
+}
+   
+main a:active {
+	color:  MediumSeaGreen; /* Цвет активных ссылок */
+}
+/*
+main A {
+	color: #000000; 
+}
+
+main A:visited {
+	color: MediumSeaGreen; 
+}
+   
+main A:active {
+	color:  #9ACD32; 
+}
+*/
+main h1 {
+     text-align: left; /* Выравнивание текста по левому краю */
+     margin-bottom: 10px; /* Небольшой отступ между абзацами */
+	 color: #9ACD32;
+     text-align: left;
+     font-family: "Lucida Sans Unicode", monospace;
+     font-size: 32px;
+}
+
+		main h2 {
+        text-align: left; /* Выравнивание текста по левому краю */
+        margin-bottom: 10px; /* Небольшой отступ между абзацами */
+		color: #9ACD32;
+        text-align: left;
+        font-family: "Lucida Sans Unicode", monospace;
+        font-size: 24px;
+      }
+      main p {
+        text-align: left; /* Выравнивание текста по левому краю */
+        margin-bottom: 12px; /* Небольшой отступ между абзацами */
+		color: #000000;
+        text-align: left;
+        font-family: "Lucida Sans Unicode", monospace;
+        font-size: 18px;
+      }
+
+      /* Футер с контактной информацией */
+      footer {
+        background-color: #9ACD32;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      /* Адаптивные стили для мобильных устройств */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        nav ul {
+          flex-direction: column;
+          margin-top: 10px;
+        }
+        nav ul li {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+        nav ul li:last-child {
+          margin-bottom: 0;
+        }
+      }
+	      .container {
+      display: flex;
+	  flex-direction: column;
+      align-items: center; /* Выравнивание по вертикали */
+      gap: 20px; /* Отступ между картинкой и текстом */
+    }
+
+    .container img {
+      max-width: 350px; /* Можно подстроить под нужный размер */
+      height: auto;
+    }
+.container img.zoom {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      transform-origin: center center;
+    }
+
+    .container img.zoom:hover {
+      transform: scale(1.7);
+    }
+
+    .text-block {
+      font-family: Lucida Sans Unicode, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+	.text-list {
+font-family: "Lucida Sans Unicode", monospace;
+        font-size: 18px;
+      line-height: 1.6;
+	  display: flex;
+	  flex-direction: column;
+      align-items: left; /* Выравнивание по вертикали */
+	  padding-left: 20px;
+	}
+		.text-block h2 {
+text-align: center;
+	}
+	
+	/* Styling the image link */
+        .image-link img {
+            width: 50px; /* Adjust the width */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #9ACD32; /* Add a border */
+            border-radius: 10px;  /*Rounded corners */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+
+        .image-link img:hover {
+            transform: scale(1.2); /* Slight zoom on hover */
+        }
+		
+		
+.breadcrumb {
+padding: 10px 10px;
+margin-bottom: 20px;
+  background-color: #9ACD32;
+  overflow-x: auto;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb li + li::before {
+  content: "›";
+  margin: 0 8px;
+  color: #fff;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.breadcrumb a:visited {
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.breadcrumb a:hover {
+	background-color: #fff; /* Slightly lighter background on hover */
+	border-radius: 5px; /* Rounded corners for hover effect */
+	color: #9ACD32;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 600px) {
+  .breadcrumb {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .breadcrumb ul {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
