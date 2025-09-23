@@ -26,7 +26,7 @@ header {
 .logo {
 font-size: 1.5rem;
 font-weight: bold;
-margin-right: 30px; /* Отступ от левой границы и между логотипом и меню */
+margin-right: 20px; /* Отступ от левой границы и между логотипом и меню */
 }
 
       /* Стили для навигационного меню */
@@ -72,19 +72,7 @@ main a:visited {
 main a:active {
 	color:  MediumSeaGreen; /* Цвет активных ссылок */
 }
-/*
-main A {
-	color: #000000; 
-}
 
-main A:visited {
-	color: MediumSeaGreen; 
-}
-   
-main A:active {
-	color:  #9ACD32; 
-}
-*/
 main h1 {
      text-align: left; /* Выравнивание текста по левому краю */
      margin-bottom: 10px; /* Небольшой отступ между абзацами */
@@ -122,12 +110,19 @@ main h1 {
       /* Адаптивные стили для мобильных устройств */
       @media (max-width: 768px) {
         header {
-          flex-direction: column;
-          align-items: flex-start;
+          /*flex-direction: column;
+          align-items: flex-start;*/
+		  display: flex;
+		  justify-content: space-between;
+		  flex-direction: row; /* Switch to row for two columns */
+        flex-wrap: nowrap; /* Allow wrapping if needed */
         }
         nav ul {
-          flex-direction: column;
+          /*flex-direction: column;*/
+		  flex-direction: row;
+		  flex-wrap: wrap; /* Allow wrapping if needed */
           margin-top: 10px;
+		  float: left;
         }
         nav ul li {
           margin-right: 0;
